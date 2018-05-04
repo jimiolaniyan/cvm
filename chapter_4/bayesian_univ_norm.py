@@ -13,7 +13,7 @@ def bayesian_univ_norm(x, alpha_prior, beta_prior, gamma_prior, delta_prior, x_t
     gamma_prime = gamma_prior + len(x)
     delta_prime = ((gamma_prior * delta_prior) + sum(x)[0]) / (gamma_prior + len(x))
 
-    # # Compute intermediate parameters
+    # Compute intermediate parameters
     alpha_cap = alpha_prime + 0.5
     gamma_cap = gamma_prime + 1
     beta_cap = (((x_test ** 2) / 2) + beta_prime + (gamma_prime * (delta_prime ** 2)) / 2) - (
